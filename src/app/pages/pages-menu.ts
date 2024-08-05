@@ -1,7 +1,7 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-  {
+  /*{
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
@@ -165,7 +165,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/maps/searchmap',
       },
     ],
-  },
+  },*/
   {
     title: 'Charts',
     icon: 'pie-chart-outline',
@@ -184,7 +184,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
-  {
+/*  {
     title: 'Editors',
     icon: 'text-outline',
     children: [
@@ -197,7 +197,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/editors/ckeditor',
       },
     ],
-  },
+  },*/
   {
     title: 'Tables & Data',
     icon: 'grid-outline',
@@ -212,7 +212,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
-  {
+/*  {
     title: 'Miscellaneous',
     icon: 'shuffle-2-outline',
     children: [
@@ -243,5 +243,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/auth/reset-password',
       },
     ],
-  },
+  },*/
 ];

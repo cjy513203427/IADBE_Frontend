@@ -45,8 +45,10 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  // { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '', redirectTo: 'pages/charts/echarts', pathMatch: 'full' },
+  // { path: '**', redirectTo: 'pages' },
+  { path: '**', redirectTo: 'pages/charts/echarts' },
 ];
 
 const config: ExtraOptions = {
