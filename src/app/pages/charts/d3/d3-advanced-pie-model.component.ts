@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 @Component({
-  selector: 'ngx-d3-advanced-pie',
+  selector: 'ngx-d3-advanced-pie-model',
   template: `
     <ngx-charts-advanced-pie-chart
       [scheme]="colorScheme"
@@ -10,19 +10,15 @@ import { NbThemeService } from '@nebular/theme';
     </ngx-charts-advanced-pie-chart>
   `,
 })
-export class D3AdvancedPieComponent implements OnDestroy {
+export class D3AdvancedPieModelComponent implements OnDestroy {
   single = [
     {
-      name: 'Germany',
-      value: 8940000,
+      name: 'Anomalib Models',
+      value: 16,
     },
     {
-      name: 'USA',
-      value: 5000000,
-    },
-    {
-      name: 'France',
-      value: 7200000,
+      name: 'YOLO Models',
+      value: 3,
     },
   ];
   colorScheme: any;

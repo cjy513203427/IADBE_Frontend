@@ -18,7 +18,8 @@ import { D3LineComponent } from './d3/d3-line.component';
 import { D3PieComponent } from './d3/d3-pie.component';
 import { D3AreaStackComponent } from './d3/d3-area-stack.component';
 import { D3PolarComponent } from './d3/d3-polar.component';
-import { D3AdvancedPieComponent } from './d3/d3-advanced-pie.component';
+import {D3AdvancedPieDatasetComponent} from './d3/d3-advanced-pie-dataset.component';
+import {D3AdvancedPieModelComponent} from './d3/d3-advanced-pie-model.component';
 import { EchartsLineComponent } from './echarts/echarts-line.component';
 import { EchartsPieComponent } from './echarts/echarts-pie.component';
 import { EchartsBarComponent } from './echarts/echarts-bar.component';
@@ -39,7 +40,8 @@ const components = [
   D3PieComponent,
   D3AreaStackComponent,
   D3PolarComponent,
-  D3AdvancedPieComponent,
+  D3AdvancedPieDatasetComponent,
+  D3AdvancedPieModelComponent,
   EchartsLineComponent,
   EchartsPieComponent,
   EchartsBarComponent,

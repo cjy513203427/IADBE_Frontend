@@ -3,7 +3,8 @@
 @include nb-install-component() {
   ngx-d3-bar,
   ngx-d3-pie,
-  ngx-d3-advanced-pie,
+  ngx-d3-advanced-pie-dataset,
+  ngx-d3-advanced-pie-model,
   ngx-d3-area-stack,
   ngx-d3-line,
   ngx-d3-polar {
