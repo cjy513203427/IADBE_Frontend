@@ -171,15 +171,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'pie-chart-outline',
     children: [
       {
-        title: 'Echarts',
+        title: 'File Statistics',
         link: '/pages/charts/echarts',
       },
       {
-        title: 'Charts.js',
+        title: 'Training Monitoring',
         link: '/pages/charts/chartjs',
       },
       {
-        title: 'D3',
+        title: 'Summary',
         link: '/pages/charts/d3',
       },
     ],
@@ -206,10 +206,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Smart Table',
         link: '/pages/tables/smart-table',
       },
-      {
+      /*{
         title: 'Tree Grid',
         link: '/pages/tables/tree-grid',
-      },
+      },*/
     ],
   },
 /*  {

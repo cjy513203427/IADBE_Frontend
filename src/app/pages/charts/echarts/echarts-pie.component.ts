@@ -32,18 +32,18 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
           legend: {
             orient: 'vertical',
             left: 'left',
-            data: data.map(item => item.name), // Dynamic legend data
+            data: data.map(item => item.datasetName), // Dynamic legend data
             textStyle: {
               color: echarts.textColor,
             },
           },
           series: [
             {
-              name: 'Countries',
+              name: 'Datasets',
               type: 'pie',
               radius: '80%',
               center: ['50%', '50%'],
-              data: data, // Dynamic series data
+              data: data.map(item => ({ value: item.sampleNumber, name: item.datasetName })), // Dynamic series data
               itemStyle: {
                 emphasis: {
                   shadowBlur: 10,
