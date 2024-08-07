@@ -36,6 +36,14 @@ export class ChartjsLineComponent implements OnDestroy, AfterViewInit {
             })),
           };
 
+          // Tooltip callback function to format time as xxhxxmxxs
+          const formatTime = (seconds: number): string => {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = seconds % 60;
+            return `${h}h${m}m${s}s`;
+          };
+
           this.options = {
             responsive: true,
             maintainAspectRatio: false,
@@ -63,6 +71,14 @@ export class ChartjsLineComponent implements OnDestroy, AfterViewInit {
             legend: {
               labels: {
                 fontColor: chartjs.textColor,
+              },
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  const value = tooltipItem.yLabel || 0; // Get the y-axis value from the tooltip
+                  return formatTime(value); // Convert the value to xxhxxmxxs format
+                },
               },
             },
           };

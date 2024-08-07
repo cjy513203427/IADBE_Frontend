@@ -203,8 +203,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'grid-outline',
     children: [
       {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
+        title: 'Btech Benchmark',
+        link: '/pages/tables/smart-table-btech',
+      },
+      {
+        title: 'MVTec3D Benchmark',
+        link: '/pages/tables/smart-table-mvtec3d',
       },
       /*{
         title: 'Tree Grid',
