@@ -80,7 +80,7 @@ export class SmartTableMVTec3dComponent implements OnInit {
 
   // Service logic included within the component
   getMVTec3DData(): Observable<MVTec3DBM[]> {
-    const apiUrl = 'http://localhost:8080/api/mvtec3d-bechmark'; // Replace with your backend API URL
+    const apiUrl = 'http://localhost:8080/api/mvtec3d-benchmark'; // Replace with your backend API URL
     return this.http.get<MVTec3DBM[]>(apiUrl);
   }
 }

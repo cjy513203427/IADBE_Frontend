@@ -52,7 +52,7 @@ export class SmartTableBtechComponent implements OnInit {
 
   // Service logic included within the component
   getBtechData(): Observable<any[]> {
-    const apiUrl = 'http://localhost:8080/api/btech-bechmark'; // Replace with your backend API URL
+    const apiUrl = 'http://localhost:8080/api/btech-benchmark'; // Replace with your backend API URL
     return this.http.get<any[]>(apiUrl);
   }
 }

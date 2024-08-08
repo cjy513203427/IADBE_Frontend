@@ -210,6 +210,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'MVTec3D Benchmark',
         link: '/pages/tables/smart-table-mvtec3d',
       },
+      {
+        title: 'MVTec Benchmark',
+        link: '/pages/tables/smart-table-mvtec',
+      },
+      {
+        title: 'VisA Benchmark',
+        link: '/pages/tables/smart-table-visa',
+      },
       /*{
         title: 'Tree Grid',
         link: '/pages/tables/tree-grid',
