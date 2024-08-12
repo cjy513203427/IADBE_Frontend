@@ -9,3 +9,5 @@ npm i
 nvm use 20
 ng serve
 ```
+
+Once that's done, we can access the IADBE Frontend with http://localhost:4200.
