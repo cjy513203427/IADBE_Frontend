@@ -1,15 +1,11 @@
-# Echarts (File Statistics)
-## 1. Pie
-Size of datasets
-## 2. Bar
-Size of model files
+## Install
+We assume you installed [nvm](https://github.com/nvm-sh/nvm), which helps us manage multiple versions.
 
-## Charts.js (Training Monitoring)
-## 1. Line
-Training time
-## 2. Radar
-Capacity of best models
-
-## D3 (Summary)
-## 1. Advanced Pie
-Finished progress
+```bash
+nvm use 14.15.0
+npm i node-sass --save-dev
+npm i -f @types/ws@8.5.4 --save-dev
+npm i
+nvm use 20
+ng serve
+```
