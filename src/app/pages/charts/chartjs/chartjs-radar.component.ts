@@ -1,5 +1,6 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService, NbColorHelper } from '@nebular/theme';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'ngx-chartjs-radar',
@@ -7,31 +8,31 @@ import { NbThemeService, NbColorHelper } from '@nebular/theme';
     <chart type="radar" [data]="data" [options]="options"></chart>
   `,
 })
-export class ChartjsRadarComponent implements OnDestroy {
+export class ChartjsRadarComponent implements OnInit, OnDestroy {
   options: any;
-  data: {};
+  data: any = {}; // initialize data
   themeSubscription: any;
 
-  constructor(private theme: NbThemeService) {
-    this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
+  constructor(private theme: NbThemeService, private http: HttpClient) {}
 
+  ngOnInit(): void {
+    this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
       const colors: any = config.variables;
       const chartjs: any = config.variables.chartjs;
 
-      this.data = {
-        labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-        datasets: [{
-          data: [65, 59, 90, 81, 56, 55, 40],
-          label: 'Series A',
-          borderColor: colors.danger,
-          backgroundColor: NbColorHelper.hexToRgbA(colors.dangerLight, 0.5),
-        }, {
-          data: [28, 48, 40, 19, 96, 27, 100],
-          label: 'Series B',
-          borderColor: colors.warning,
-          backgroundColor: NbColorHelper.hexToRgbA(colors.warningLight, 0.5),
-        }],
-      };
+      // request data from backend
+      this.http.get<any[]>('http://localhost:8080/api/radar-data')
+        .subscribe(response => {
+          this.data = {
+            labels: ['Training Time', 'Model Size', 'F1Score'],
+            datasets: response.map((item, index) => ({
+              data: item.data,
+              label: item.label,
+              borderColor: this.getBorderColor(colors, index),
+              backgroundColor: NbColorHelper.hexToRgbA(this.getBackgroundColor(colors, index), 0.5),
+            })),
+          };
+        });
 
       this.options = {
         responsive: true,
@@ -60,5 +61,16 @@ export class ChartjsRadarComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.themeSubscription.unsubscribe();
+  }
+
+  // Helper functions to get colors dynamically
+  private getBorderColor(colors, index): string {
+    const borderColors = [colors.danger, colors.warning];
+    return borderColors[index % borderColors.length];
+  }
+
+  private getBackgroundColor(colors, index): string {
+    const backgroundColors = [colors.dangerLight, colors.warningLight];
+    return backgroundColors[index % backgroundColors.length];
   }
 }
