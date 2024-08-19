@@ -11,7 +11,7 @@ nvm use 20
 ng serve
 ```
 
-Once that's done, we can access the IADBE Frontend with http://localhost:4200.
+
 
 
 ### Production (Docker)
@@ -22,5 +22,6 @@ docker build -t iadbe_frontend .
 docker run -dt -v /home/jinyao/projects/IADBE_Frontend/src:/app/src --name iadbe_frontend -p 4200:4200 iadbe_frontend
 
 ```
+"/home/jinyao/projects/IADBE_Frontend/src" is your project source folder.
 
-Access the IADBE Frontend with http://localhost:4200.
+Once that's done, we can access the IADBE Frontend with http://localhost:4200.
