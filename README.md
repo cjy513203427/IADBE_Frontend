@@ -1,5 +1,12 @@
 ## Install
 We assume you installed [nvm](https://github.com/nvm-sh/nvm), which helps us manage multiple versions.
+
+clone the project
+```bash
+git clone https://github.com/cjy513203427/IADBE_Frontend.git
+cd IADBE_Frontend/
+```
+
 ### Development
 
 ```bash
