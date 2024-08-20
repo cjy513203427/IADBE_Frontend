@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY package.json .
 
+# install node-sass and save to devDependencies
 RUN npm i node-sass --save-dev
+# force install @types/ws@8.5.4
 RUN npm i -f @types/ws@8.5.4 --save-dev
 
 RUN npm i
