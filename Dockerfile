@@ -4,7 +4,10 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN npm install
+RUN npm i node-sass --save-dev
+RUN npm i -f @types/ws@8.5.4 --save-dev
+
+RUN npm i
 
 COPY . .
 
